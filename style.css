@@ -1,7 +1,12 @@
 /* intuitivnější box-sizing pro všechny prvky na stránce */
-html { box-sizing: border-box; }
-*, ::before, ::after { box-sizing: inherit; }
-
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
 
 /*
 	Poznámky:
@@ -18,6 +23,8 @@ html { box-sizing: border-box; }
 	h2 - 36px  (nadpisy v dalších sekcích)
 	h3 - 18px  (název produktu v Dnešní nabídce)
 	Nadpisy mají řádkování jen 1.25
+	
+    font-family: 'Playfair Display', serif;
 
 	Barvy:
 	#f195b2		růžová - tlačítka a zvýraznění
@@ -28,8 +35,155 @@ html { box-sizing: border-box; }
 	#303339		tmavé pozadí patičky
 */
 
-
 body {
-	margin: 0;
+  margin: 0;
+  font-family: "Lora", serif;
+  color: #242424;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
+.obsah-sekce {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 80px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.25;
+  color: #3e606b;
+  margin: 0;
+}
+
+/*-------------------------------Hlavička------------------------------*/
+.hlavicka {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 170px;
+  padding: 30px 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #242424;
+  padding: 10px 15px;
+}
+
+.menu a:hover {
+  background-color: #f195b2;
+  border-radius: 20px;
+  color: white;
+}
+
+/*-------------------------Sekce Hero-------------------------------------*/
+.hero {
+  background-image: url(./images/cupcake.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: white;
+  font-size: 52px;
+  padding-right: 40%;
+}
+
+.hero-text {
+  font-size: 24px;
+  color: white;
+  font-style: italic;
+  padding-right: 40%;
+  margin: 30px 0 0 0;
+}
+
+/*-----------------------sekce Vítejte-------------------------------------*/
+h2 {
+  font-size: 36px;
+}
+
+.dva-sloupce {
+  display: flex;
+  justify-content: space-between;
+}
+
+.foto {
+  border-radius: 5px;
+}
+
+.tlacitko {
+  border-radius: 30px;
+  padding: 15px 40px;
+  background-color: #f195b2;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin: 30px 0;
+}
+
+.tlacitko:hover {
+  background-color: #d2567d;
+}
+
+/*--------------------Sekce Dnešní nabídka------------------------------*/
+.nabidka {
+  background-color: #f0f0f0;
+}
+
+.karta {
+  display: flex;
+  flex-direction: column;
+  width: 252.5px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(216, 215, 215, 0.466);
+}
+.karta p {
+  margin-bottom: 0;
+}
+
+.karta img {
+  border-radius: 5px 5px 0 0;
+}
+
+.karta-popis {
+  text-align: center;
+  padding: 20px;
+}
+
+.produkty {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*---------------sekce Náš přístup k pečení---------------------------*/
+.pristup {
+  background-color: white;
+}
+
+.levy {
+  margin-right: 30px;
+}
+
+/*----------------Sekce Patička---------------------------------*/
+.paticka {
+  background-color: #303339;
+  color: white;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+}
